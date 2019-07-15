@@ -181,4 +181,50 @@ $("#btnClrearPal").click(function () {
     $("#palOut").val("");
 
 })
+
+//code for Sum of All fears
+
+$("#code").hide();
+
+$("#showToggle").click(function () {
+    $("#code").toggle();
+
+    if ($("#showToggle").text() == "Show Code") {
+        $("#showToggle").text("Hide Code");
+    }
+    else {
+        $("#showToggle").text("Show Code");
+    }
+});
+
+
+$("#run").click(function () {
+
+    var userKvalue = $("#kValue").val();
+
+    var user = [
+        +$("#num1").val(),
+        +$("#num2").val(),
+        +$("#num3").val(),
+        +$("#num4").val(),
+        +$("#num5").val(),
+        +$("#num6").val()
+    ];
+    //Loop through the array and add the adjacent number and check for the answer
+    for (var varArray = 0; varArray < user.length - 1; varArray++) {
+        //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
+        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+            //this inner inner loop checks a condition that meets the value knm
+            if (userKvalue == user[varArray] + user[innerLoop]) {
+                break;//for loop control mechanism, comes out of the foreloop when the condition is met
+            }
+            else {
+                $("#KValueAfter").html("<b>K value was not found</b>");
+            }
+        }
+    }
+    //output values to display
+
+    $("#kValueAfter").html("<b>" + userKvalue + "</b> was found by adding array members" + "<span class='target'>" + ("#firstArrayNum").text(user[varArray]) + $("#secondArrayNum").text(user[innerLoop]));
+})
  
