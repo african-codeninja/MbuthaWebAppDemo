@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "JSDemo";
+}
+
+<h2>JSDemo</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        Enter Number 1:
+    </div>
+    <div class="col-md-3">
+        <input type="number" id="input1" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        Enter Number 2:
+    </div>
+    <div class="col-md-3">
+        <input type="number" id="input2" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <button id="btn1" class="btn btn-primary">Click Me</button>
+    </div>
+</div>
+
+<style>
+    .btn-puce{
+        background-color:rgb(80, 53, 18)
+        color: white
+    }
+</style>
+<hr />
+
+<div class="row text-center h3">
+    <div class="col-md-12">
+        Here are the results
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <p id="sum"></p>
+    </div>
+    <div class="col-md-6">
+        <p id="mult"></p>
+    </div>
+</div>
+
+<!-- How do I interact with the Document Object Model (DOM) -->
+<!--    Step 1: Get the data
+          Step 2: Do something with the data like make a calculation
+          Step 3: Show the result to the user
+    -->
+
+@section scripts{
+
+    <script>
+        $("#btn1").click(function () {
+                //Step 1: get the user data
+                var num1 = Number($("#input1").val());//getting the value from user input from an input element
+                var num2 = +$("#input2").val();
+
+                //Step 2: Do something with the data in this case add and multiply
+                //perform some operation
+                var sum = num1 + num2;
+                var mult = num1 * num2;
+
+                //Step 3
+                $("#sum").text("The sum is: " + sum);
+                $("#mult").text("The product is: " + mult);
+        })</script>
+
+
+
+}

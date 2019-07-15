@@ -1,0 +1,46 @@
+﻿.iconify {
+            font-size: 80px;
+        }
+        /*.workexperience{
+            text-align: left;
+            display: grid; grid-template-rows: 100px
+        }*/
+
+.standardW {
+    width: 300px;
+    /*padding-top: 50px;*/
+}
+
+.projectWord {
+    text-align: center;
+}
+
+.fizz {
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.buzz {
+    color: blue;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.fizzbuzz {
+    color: green;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.addpadding {
+    margin: 10px
+}
+
+.wrap{
+    word-break:break-word;
+}
+
+.list-group-item-mine{
+    background-color: black;
+}

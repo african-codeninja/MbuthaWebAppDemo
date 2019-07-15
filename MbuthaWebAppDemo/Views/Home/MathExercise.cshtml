@@ -1,0 +1,267 @@
+﻿
+@{
+    ViewBag.Title = "MathExercise";
+}
+
+<h2>Projects Tackled so far:</h2>
+<p>
+    <ol>
+        <li>Visual Basic 2018/2017 Wizard to Build a website project with Bootsrap as a framework.</li>
+        <li>JavaScript language to  build applications inside webpages to perform certain functions wihin web pages</li>
+    </ol>
+    Click the Button below to see the Apps
+</p>
+<br />
+
+<!--Modal-->
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mathModal">Click to Run Application</button>
+<!-- Modal -->
+<div id="mathModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Project Exercises</h4>
+            </div>
+            <div class="modal-body">
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#mathExercise">Math Exercise</a></li>
+                    <li><a data-toggle="tab" href="#factoral">Factoral</a></li>
+                    <li><a data-toggle="tab" href="#fizzBuzz">Fizz Buzz</a></li>
+                    <li><a data-toggle="tab" href="#palindrome">Palindrome</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="mathExercise" class="tab-pane fade in active">
+                        <h3>Math Calculation</h3>
+
+                        <!--top row -->
+                        <div class="row">
+                            <div class="col-md-12">This page allows you to calculate five numbers that you enter randomly</div>
+                        </div>
+                        <br />
+                        <div class="container">
+                            <div class="row">
+                                <!--split it into columns for text and input boxes-->
+                                <!--First Column-->
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <!--First Inner Column-->
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <input type="number" id="mathNum1" class="form-control" placeholder="Enter your First Number" />
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <input type="number" id="mathNum2" class="form-control" placeholder="Enter your Second Number" />
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <input type="number" id="mathNum3" class="form-control" placeholder="Enter your Third Number" />
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <input type="number" id="mathNum4" class="form-control" placeholder="Enter your Fourth Number" />
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <input type="number" id="mathNum5" class="form-control" placeholder="Enter your Fifth Number" />
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <button type="button" class="btn btn-default" id="btn1">Tap to Calculate</button>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <button id="clearBtn" type="button" class="btn btn-default">Clear</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Second column-->
+                                <div class="col-md-6">
+                                    <div>
+                                        <div class="row">
+                                            The Results for the calculations is:
+                                        </div>
+
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <p id="least"></p>
+                                        </div>
+                                        <div class="row">
+                                            <p id="greatest"></p>
+                                        </div>
+                                        <div class="row">
+                                            <p id="mean"></p>
+                                        </div>
+                                        <div class="row">
+                                            <p id="sum"></p>
+                                        </div>
+                                        <div class="row">
+                                            <p id="product"></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="factoral" class="tab-pane fade">
+                        <h3>Factoral</h3>
+
+                        Program that calculates the factorial of a number.
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                Welcome to the Factoral Problem!!!
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <input id="fact" type="number" placeholder="Enter your number" />
+                                </div>
+
+                                <div class="row">
+                                    <button id="btnFact" class="btn btn-danger">Calculate</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12 text-center h4">
+                                        <u>Result</u>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <p id="factOut"></p>
+                        </div>
+                    </div>
+
+                    <div id="fizzBuzz" class="tab-pane fade">
+                        <h3>FizzBuzz</h3>
+                        <p>Program FizzBuzz.</p>
+                    </div>
+
+                    <div id="palindrome" class="tab-pane fade">
+                        <h3>Palindrome</h3>
+                        <p>Program that determines whether a word is a Palindrome.</p>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            
+
+
+            
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+
+        
+
+    </div>
+        
+
+</div>    
+
+   
+
+
+<!--Coding the click event-->
+
+@section scripts{
+
+    <script>
+        $("#btn1").click(function () {
+            //Step 1: get the user data
+            var num1 = Number($("#mathNum1").val());//getting the value from user input from an input element
+            var num2 = Number($("#mathNum2").val());//
+            var num3 = Number($("#mathNum3").val());
+            var num4 = Number($("#mathNum4").val());
+            var num5 = Number($("#mathNum5").val());
+
+            //Step 2: Do something with the data in this case add and multiply
+            //perform some operation
+            //var sum = num1 + num2 + num3 + num4 + num5;
+            //var product = num1 * num2 * num3 * num4 * num5;
+            //var average = sum / 5;
+
+            $("#least").text("The smallest number is: " + Math.min(num1, num2, num3, num4, num5));
+            $("#greatest").text("The largest number is: " + Math.max(num1, num2, num3, num4, num5));
+            $("#sum").text("The sum of the numbers is: " + (num1 + num2 + num3 + num4 + num5));
+            $("#product").text("The product of numbers is: " + (num1 * num2 * num3 * num4 * num5));
+            $("#mean").text("The average of numbers is: " + (num1 + num2 + num3 + num4 + num5)/5);
+
+
+            //Step 3 display the results
+            //$("#greatest").text("The largest number is: " + largest);
+            //$("#mean").text("The sum of the numbers is: " + sum);
+            //$("#sum").text("The product of the numbers is: " + product);
+            //$("#product").text("The average of the numbers is: " + average);
+        })
+
+            //step 4 button to clear the results
+        $("#clearBtn").click(function () {
+            $("#mathNum1,#mathNum2,#mathNum3,#mathNum4,#mathNum5").val("")
+            
+            $("#least, #greatest, #mean, #sum, #product",).text("");
+
+            })
+
+
+        $("#btnFact").click(function () {
+                        //Step 1: Get User data
+                        var number = +$("#fact").val();
+
+
+                        //we are trying to make sure the user does not enter numbers greater than 170
+                        if (number > 170) {
+                            alert("Please enter positive numbers less than 171");
+                            $("#fact").val('');
+                            return;//return satement used to kick out the click anonymous function
+                        }
+
+                        else {
+                            //Step 2:Calculate the factorial
+                            for (var loop = number - 1; loop > 1; loop--) {
+                                //How do we calculate the factorial
+                                number *= loop;
+                            }
+                        }
+                        //Step: Show the result
+                        $("#factOut").text(number);
+                    })
+
+         //Clear the text
+        $("#btnClear").click(function () {
+
+                        $("#factOut").val('');
+
+                    })
+    </script>
+
+
+
+}
+
+

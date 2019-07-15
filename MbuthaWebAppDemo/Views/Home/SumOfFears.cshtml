@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "SumOfFears";
+}
+    
+<div class="container">
+        <h2>Sum Of all your Fears</h2>
+
+        <div class="row">
+            <p>
+                The Sum of All Fears Coding challenge involves an array of integers and some number called 'K'. If K can be derived
+                can be derived from adding any two numbers from the array then it is said to contain that 'K' value.
+            </p>
+        </div>
+
+        <div class="row">
+            <p>Please enter six numbers in the provided boxes below</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <input id="num1" type="number" />
+            </div>
+
+            <div class="col-md-2">
+                <input id="num2" type="number" />
+            </div>
+
+            <div class="col-md-2">
+                <input id="num3" type="number" />
+            </div>
+
+            <div class="col-md-2">
+                <input id="num4" type="number" />
+            </div>
+
+            <div class="col-md-2">
+                <input id="num5" type="number" />
+            </div>
+
+            <div class="col-md-2">
+                <input id="num6" type="number" />
+            </div>
+        </div>
+
+        <div class="row">
+            Establish a 'K' value by entering a number below
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <input id="kValue" type="number" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <button id="run" class="btn btn-primary">Search</button>
+            </div>
+
+            <div class="col-md-3">
+                <button id="showToggle" class="btn btn-primary">Show Code</button>
+            </div>
+            <hr />
+        </div>
+        <div class="row">           
+                <div class="col-md-12">
+                    <h6 id="kValueAfter"></h6> was found by adding array members <h6 id="firstArrayNum"></h6><h6 id="secondArrayNum"></h6>
+                </div>         
+        </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="code">
+            <pre class="brush: js">
+$("#run").click(function () {
+
+            var userKvalue = $("#kValue").val();
+
+            var user = [
+                +$("#num1").val(),
+                +$("#num2").val(),
+                +$("#num3").val(),
+                +$("#num4").val(),
+                +$("#num5").val(),
+                +$("#num6").val()
+            ];
+            //Loop through the array and add the adjacent number and check for the answer
+            for (var varArray = 0; varArray < user.length - 2; varArray++) {
+                //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
+                for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+
+                    if (userKvalue == user[varArray] + user[innerLoop]) {
+
+                        return;
+                    /*
+                    if (user[varArray + 1] + user[varArray] == kNumber ||
+                        user[varArray + 2] + user[varArray] == kNumber ||
+                        user[varArray + 3] + user[varArray] == kNumber ||
+                        user[varArray + 4] + user[varArray] == kNumber ||
+                        user[varArray + 5] + user[varArray] == kNumber) {
+
+                        othernumber = varArray - kNumber;
+                        */
+                    }
+                }
+            }
+            //output values to display
+            
+            $("#kValueAfter").text(userKvalue);
+
+            $("#firstArrayNum").text(user[varArray]);
+
+            $("#secondArrayNum").text(user[innerLoop]);
+        })
+            
+
+</pre>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        $("#code").hide();
+
+        $("#showToggle").click(function() {
+            $("#code").toggle();
+
+                if ($("#showToggle").text() == "Show Code") {
+                        $("#showToggle").text("Hide Code");
+                }
+                else {
+                $("#showToggle").text("Show Code");
+                }
+        });
+
+
+        $("#run").click(function () {
+
+            var userKvalue = $("#kValue").val();
+
+            var user = [
+                +$("#num1").val(),
+                +$("#num2").val(),
+                +$("#num3").val(),
+                +$("#num4").val(),
+                +$("#num5").val(),
+                +$("#num6").val()
+            ];
+            //Loop through the array and add the adjacent number and check for the answer
+            for (var varArray = 0; varArray < user.length - 1; varArray++) {
+                //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
+                for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+                    //this inner inner loop checks a condition that meets the value knm
+                    if (userKvalue == user[varArray] + user[innerLoop]) {
+                        break;//for loop control mechanism, comes out of the foreloop when the condition is met
+                    }
+                    else {
+                        $("#KValueAfter").html("<b>K value was not found</b>");
+                    }
+                }
+            }
+            //output values to display
+            
+            $("#kValueAfter").html("<b>" + userKvalue + "</b> was found by adding array members" + "<span class='target'>" + ("#firstArrayNum").text(user[varArray]) + $("#secondArrayNum").text(user[innerLoop]));
+        })
+    </script>
+
+ }
+

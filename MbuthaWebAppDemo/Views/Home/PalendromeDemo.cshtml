@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "PalendromeDemo";
+}
+
+
+
+
+
+<h2>
+    Palendrome Demo
+</h2>
+<!-- Use the Bootstrap Grid to layout the UI -->
+<!--Use the decrementing for loop to iterate over the supplied word-->
+<div class="row">
+    <div class="col-md-12">
+        Welcome to the Palendrome Problem!!!
+        <br />
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <br />
+                <input id="palIn" type="text" placeholder="Enter your word" />
+            </div>
+            <br />
+            <div class="row">
+                <button id="btnPal" class="btn btn-danger standardW">Check Palendrome with Strings</button>
+            </div>
+            <br />
+            <div class="row">
+                <button id="btnPal2" class="btn btn-danger standardW">Check Palendrome with Array</button>
+            </div>
+            <br />
+            <div class="row">
+                <button id="btnClearPal" class="btn btn-danger standardW">Clear text</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <br />
+            <div class="col-md-12 text-center h4">
+                <u>Is your word a Palendrome ?</u>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>Using the string method:</p>
+            <p id="palOut"></p>
+        </div>
+
+        <div class="row">
+            <p>Using the Array method:</p>
+            <p id="palOut2"></p>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    
+
+}

@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzzDemo";
+}
+
+<style>
+    .fizz{
+        color: red;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .buzz{
+        color: blue;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .fizzbuzz{
+        color: green;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .addpadding{
+        margin : 10px
+    }
+</style>
+
+<h2>FizzBuzz Demo</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        Welcome to the Fizz Buzz Problem!!!
+    </div>
+</div>
+<!--Input Column-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <input id="fbInput1" type="number" class="addpadding" placeholder="Enter your first number" />
+            </div>
+
+            <div class="row">
+                <input id="fbInput2" type="number" class="addpadding" placeholder="your second number" />
+            </div>
+
+            <div class="row">
+                <button id="btnFizzBuzz" class="btn btn-danger">Check to See if its a fizzbuzz</button>
+            </div>
+
+            <div class="row">
+                <button id="btnClearFact" class="btn btn-danger">Calculate</button>
+            </div>
+        </div>
+        <!--Out put column-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12 text-center h4">
+                    <u>FizzBuzz Result</u>
+                </div>
+            </div>
+
+            <div class="row">
+                    <p id="fizzBuzzOut"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    @*<script>
+        $("#btnFizzBuzz").click(function () {
+
+            var num1 = +$("#fbInput1").val();
+            var num2 = +$("#fbInput2").val();
+            var output = " ";
+            var space = " ";
+
+            //var fizzbuzzbuzzEntry = "<span class='fizzbuzz'>Fii-Buzz</span>";
+
+            for (var counter = 1;counter <= 100; counter++) {
+
+                if (counter % num1 == 0 && counter % num2 == 0) {
+
+                    output += "<span class='fizzbuzz'>Fizz-Buzz" + space + "</span>";
+                }
+
+                else if (counter % num1 == 0) {
+
+                    output += "<span class='fizz'>Fizz" + space + "</span>";
+                }
+
+                else if (counter % num2 == 0) {
+
+                    output += "<span class='fizzbuzz'>Buzz"+ space + "</span>";
+                }
+                else {
+                    output += "<span class='buzz'>" + counter +  space  + "</span>";
+                }
+
+                 
+            } 
+
+            output = output.substr(0, output.length - 2);
+
+            $("#fizzBuzzOut").html(output);
+        })
+    </script>*@
+    
+  }
+

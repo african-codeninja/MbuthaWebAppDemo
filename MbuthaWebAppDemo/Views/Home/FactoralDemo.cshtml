@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "FactoralDemo";
+}
+
+<h2>FactoralDemo</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        Welcome to the Factoral Problem!!!
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <input id="fact" type="number" placeholder="Enter your number" />
+        </div>
+
+        <div class="row">
+            <button id="btnFact" class="btn btn-danger">Calculate</button>
+        </div>
+
+        <div class="row">
+            <button id="btnClearFact" class="btn btn-danger">Calculate</button>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12 text-center h4">
+                <u>Result</u>
+            </div>
+        </div>
+
+        <div class="row">
+            <p id="factOut"></p>
+        </div>
+    </div>
+</div>
+
+
+    @section scripts{
+        
+        <script>
+
+            $("#btnFact").click(function(){
+            //Step 1: Get User data
+                var number = +$("#fact").val();
+
+
+                //we are trying to make sure the user does not enter numbers greater than 170
+                if (number > 170) {
+                    alert("Please enter positive numbers less than 171");
+                    $("#fact").val('');
+                    return;//return satement used to kick out the click anonymous function
+                }
+
+                else {
+                        //Step 2:Calculate the factorial
+                        for (var loop = number - 1; loop > 1; loop--) {
+                        //How do we calculate the factorial
+                        number *= loop;
+                        }
+                    }
+                //Step: Show the result
+                $("#factOut").text(number);
+            })
+
+            //Clear the text
+            $("#btnClearFact").click(function () {
+
+                $("#factOut").val('');
+
+            })
+            
+
+        </script>
+        }
