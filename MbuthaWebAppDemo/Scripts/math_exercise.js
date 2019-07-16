@@ -198,22 +198,22 @@ $("#showToggle").click(function () {
 });
 
 
-$("#run").click(function () {
+$("#soafRun").click(function () {
 
     var userKvalue = $("#kValue").val();
 
     var user = [
-        +$("#num1").val(),
-        +$("#num2").val(),
-        +$("#num3").val(),
-        +$("#num4").val(),
-        +$("#num5").val(),
-        +$("#num6").val()
+        +$("#soafNum1").val(),
+        +$("#soafNum2").val(),
+        +$("#soafNum3").val(),
+        +$("#soafNum4").val(),
+        +$("#soafNum5").val(),
+        +$("#soafNum6").val()
     ];
     //Loop through the array and add the adjacent number and check for the answer
-    for (var varArray = 0; varArray < user.length - 1; varArray++) {
+    for (var varArray = 0; varArray < user.length; varArray+1) {
         //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
-        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+        for (var innerLoop = 0; innerLoop < user.length; innerLoop+1) {
             //this inner inner loop checks a condition that meets the value knm
             if (userKvalue == user[varArray] + user[innerLoop]) {
                 break;//for loop control mechanism, comes out of the foreloop when the condition is met
@@ -225,6 +225,6 @@ $("#run").click(function () {
     }
     //output values to display
 
-    $("#kValueAfter").html("<b>" + userKvalue + "</b> was found by adding array members" + "<span class='target'>" + ("#firstArrayNum").text(user[varArray]) + $("#secondArrayNum").text(user[innerLoop]));
+    $("#kValueAfter").html("<b>" + userKvalue + "</b> was found by adding array members" + "<span class='target'>" + $("#firstArrayNum").html(user[varArray]) + $("#secondArrayNum").html(user[innerLoop]));
 })
  
