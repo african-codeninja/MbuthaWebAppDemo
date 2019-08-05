@@ -115,6 +115,22 @@ $("#btnFizzBuzz").click(function () {
 
     })
 })
+//end of Fizz-Buzz Code
+
+
+$("#code4").hide();
+
+$("#showTogglePal").click(function() {
+    $("#code4").toggle();
+
+    if ($("#showTogglePal").text() == "Show Code") {
+        $("#showTogglePal").text("Hide Code");
+    }
+    else {
+        $("#showTogglePal").text("Show Code");
+    }
+});
+
 //Palindrome Code
     $("#btnPal1").click(function () {
         //Step 1: Get the word
@@ -181,8 +197,9 @@ $("#btnClrearPal").click(function () {
     $("#palOut").val("");
 
 })
+//ending code palindrome
 
-//code for Sum of All fears
+//--Beggining code for Sum of All fears
 
 $("#code").hide();
 
