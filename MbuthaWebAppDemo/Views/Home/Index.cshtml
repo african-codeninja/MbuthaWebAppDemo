@@ -250,7 +250,13 @@
         <hr>
         <div class="container-fluid">
             <div class="col-md-12 text-center">
-                <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#mathModal">Click to Run Application</button>
+                <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#mathModal">Click for Coding Exercises</button>
+            </div>
+           <div class="col-lg-12">
+
+           </div>
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-default btn-lg"><a href="https://mwangiblog2.azurewebsites.net/">Click for Project</a></button>
             </div>
         </div>
         <!--Modal-->
@@ -419,7 +425,6 @@
                             </div>
                             <!--fourth row fizz-buzz exercise code challenge -->
                             <!--Beggining of palindrome-->
-
                             <div id="palindrome" class="col-lg-12 tab-pane fade">
                                 <div class="col-md-12">
                                     <div class="container">
@@ -445,7 +450,14 @@
                                                         <div class="row">
                                                             <button id="btnClearPal" class="btn btn-danger standardW">Clear text</button>
                                                         </div>
+                                                        <hr />
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <button id="showTogglePal" class="btn btn-primary">Show Code</button>
+                                                            </div>
+                                                        </div>
                                                     </div>
+
                                                     <div class="col-md-8">
                                                         <div class="row">
                                                             <br />
@@ -471,13 +483,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <br />
-                                <div class="row">
-                                    <div class="col-md-12">
-                                            <button id="showTogglePal" class="btn btn-primary">Show Code</button>
-                                                <hr />
-                                            <div id="code4">
-                                                <pre class="brush: js">
+                                <hr />
+                                <div id="code4">
+                                    <pre class="brush: js">
     $("#btnPal1").click(function () {
         //Step 1: Get the word
         var word = $("#palIn").val();
@@ -544,10 +552,9 @@ $("#btnClrearPal").click(function () {
 
 })
                                             </pre>
-                                            </div>
-                                    </div>
                                 </div>
-</div>
+
+                            </div>
                             <!--Fifth row sum of all fears Exercise-->
                             <div id="sumOAFears" class="col-lg-12 top-pane fade">
                                 <div class="col-md-12 container">
@@ -666,9 +673,7 @@ $("#run").click(function () {
             $("#firstArrayNum").text(user[varArray]);
 
             $("#secondArrayNum").text(user[innerLoop]);
-        })
-            
-
+        })            
                                                         </pre>
                                     </div>
                                 </div>
@@ -696,7 +701,18 @@ $("#run").click(function () {
                     <ul class="list-group">
                         <li class="list-group-item list-group-item-mine">A Math Exercise that allows the user to input 5 number and from those five numbers get the Lowest, Highest, mean and Sum of the numbers</li>
                         <li class="list-group-item list-group-item-mine">A palendore program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.</li>
-                        <li class="list-group-item list-group-item-mine">Third item</li>
+                        <li class="list-group-item list-group-item-mine">
+                            A Fizz Buzz Program that Write a short program that prints each number from 1 to 100 on a new line.
+
+                            For each multiple of a number, prints "Fizz" instead of the number.
+
+                            For each multiple of another input number, prints "Buzz" instead of the number.
+
+                            For numbers which are multiples of both numbers, print "FizzBuzz" instead of the number.
+                        </li>
+                        <li class="list-group-item list-group-item-mine">
+                            This challenge requires you to return the factorial of a given number. A factorial of some number N is N multiplied by (N-1) multiplied by (N-2) and so forth until you reach the number 1
+                        </li>
                     </ul>
 
                 </div>
