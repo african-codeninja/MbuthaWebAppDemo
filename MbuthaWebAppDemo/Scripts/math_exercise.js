@@ -1,5 +1,7 @@
 ﻿  
-        $("#btn1").click(function () {
+//Start of Math Exercises
+
+            $("#btn1").click(function () {
             //Step 1: get the user data
             var num1 = Number($("#mathNum1").val());
             //getting the value from user input from an input element
@@ -67,7 +69,8 @@
         $("#factOut").val('');
 
         })
-//Fizz buzz code
+
+// Start of Fizz buzz code
 $("#btnFizzBuzz").click(function () {
 
     var num1 = +$("#fbInput1").val();
@@ -118,6 +121,7 @@ $("#btnFizzBuzz").click(function () {
 //end of Fizz-Buzz Code
 
 
+//Start of Palindrome
 $("#code4").hide();
 
 $("#showTogglePal").click(function() {
@@ -200,7 +204,6 @@ $("#btnClrearPal").click(function () {
 //ending code palindrome
 
 //--Beggining code for Sum of All fears
-
 $("#code").hide();
 
 $("#showToggle").click(function () {
@@ -230,7 +233,8 @@ $("#soafRun").click(function () {
     //Loop through the array and add the adjacent number and check for the answer
     for (var varArray = 0; varArray < user.length; varArray+1) {
         //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
-        for (var innerLoop = 0; innerLoop < user.length; innerLoop+1) {
+        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++
+        ) {
             //this inner inner loop checks a condition that meets the value knm
             if (userKvalue == user[varArray] + user[innerLoop]) {
                 break;//for loop control mechanism, comes out of the foreloop when the condition is met
