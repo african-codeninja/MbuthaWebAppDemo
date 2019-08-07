@@ -22,13 +22,13 @@
 }
 
 .buzz {
-    color: blue;
+    color: greenyellow;
     font-weight: bolder;
     font-size: larger;
 }
 
 .fizzbuzz {
-    color: green;
+    color: cornflowerblue;
     font-weight: bolder;
     font-size: larger;
 }
@@ -43,4 +43,12 @@
 
 .list-group-item-mine{
     background-color: black;
+}
+
+.modalback{
+    color:aqua;
+}
+
+.palIn{
+    width: 50%;
 }
