@@ -231,10 +231,9 @@ $("#soafRun").click(function () {
         +$("#soafNum6").val()
     ];
     //Loop through the array and add the adjacent number and check for the answer
-    for (var varArray = 0; varArray < user.length; varArray+1) {
+    for (var varArray = 0; varArray < user.length; varArray++) {
         //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
-        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++
-        ) {
+        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
             //this inner inner loop checks a condition that meets the value knm
             if (userKvalue == user[varArray] + user[innerLoop]) {
                 break;//for loop control mechanism, comes out of the foreloop when the condition is met
@@ -246,6 +245,6 @@ $("#soafRun").click(function () {
     }
     //output values to display
 
-    $("#kValueAfter").html("<b>" + userKvalue + "</b> was found by adding array members" + "<span class='target'>" + $("#firstArrayNum").html(user[varArray]) + $("#secondArrayNum").html(user[innerLoop]));
-})
+    $("#kValueAfter").html( + userKvalue + "</b>  was found by adding array members ") + $("#firstArrayNum").html(varArray) + "and" + $("#secondArrayNum").html(innerLoop+1);
+});
  
