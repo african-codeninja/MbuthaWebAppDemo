@@ -124,7 +124,8 @@ $("#btnFizzBuzz").click(function () {
 //Start of Palindrome
 $("#code4").hide();
 
-$("#showTogglePal").click(function() {
+$("#showTogglePal").click(function ()
+{
     $("#code4").toggle();
 
     if ($("#showTogglePal").text() == "Show Code") {
@@ -136,7 +137,7 @@ $("#showTogglePal").click(function() {
 });
 
 //Palindrome Code
-    $("#btnPal1").click(function () {
+ $("#btnPal1").click(function () {
         //Step 1: Get the word
         var word = $("#palIn").val();
 
@@ -204,12 +205,14 @@ $("#btnClrearPal").click(function () {
 //ending code palindrome
 
 //--Beggining code for Sum of All fears
-$("#code").hide();
+$("#code5").hide();
 
-$("#showToggle").click(function () {
-    $("#code").toggle();
+$("#showToggle").click(function ()
+{   
+    $("#code5").toggle();
 
-    if ($("#showToggle").text() == "Show Code") {
+    if ($("#showToggle").text() == "Show Code")
+    {
         $("#showToggle").text("Hide Code");
     }
     else {
