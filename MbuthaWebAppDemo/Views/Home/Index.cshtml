@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MbuthaWebAppDemo.Models.EmailModel
+
+@{
     Layout = null;
 }
 
@@ -77,7 +79,7 @@
         <div class="header-content">
             <div class="inner">
                 <h1 class="cursive">.Net Full Stack Developer Moses Mbutha Mwangi</h1>
-                <h4>Offering Sound Full Stack Solutions: Using the .Net stack of technolgies in cluding but not limited to HTML5, CSS3, C#, Miscrosoft SQL, Razor, BootStrap and Azure related services</h4>
+                <h4>Offering Sound Full Stack Solutions: Using the .Net stack of technologies in cluding but not limited to HTML5, CSS3, C#, Miscrosoft SQL, Razor, BootStrap and Azure related services</h4>
                 <hr>
             </div>
             <div class="row">
@@ -261,15 +263,123 @@
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
                             <div class="modal-dialog">
-
                                 <!-- Modal content-->
-                                <div class="modal-content">
+                                <div class="modal-content container-fluid add">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
+                                        <h4 class="modal-title">Sum of all fears</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Some text in the modal.</p>
+                                        <div class="Row">
+                                            <h2>Sum Of all your Fears</h2>
+                                            <div class="row addpadding">
+                                                <p>
+                                                    The Sum of All Fears Coding challenge involves an array of integers and some number called 'K'. If K can be derived
+                                                    can be derived from adding any two numbers from the array then it is said to contain that 'K' value.
+                                                </p>
+                                            </div>
+                                            <div class="row addpadding">
+                                                <p>Please enter six numbers in the provided boxes below</p>
+                                            </div>
+                                            <!--inout boxes for sum of all fears-->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum1" type="number" class="form-control" />
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum2" type="number" class="form-control" />
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum3" type="number" class="form-control" />
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum4" type="number" class="form-control" />
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum5" type="number" class="form-control" />
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <input id="soafNum6" type="number" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row addpadding">
+                                                Establish a 'K' value by entering a number below
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <input id="kValue" type="number" class="form-control addpadding" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <button id="soafRun" class="btn btn-primary">Search</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button id="showToggle" class="btn btn-primary">Show Code</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h6 id="kValueAfter"></h6>
+                                                    <h6 id="firstArrayNum"></h6>
+                                                    <h6 id="secondArrayNum"></h6>
+                                                </div>
+                                            </div>
+                                            <div id="code5" class="rows">
+                                                <pre class="brush: js container">
+											$("#run").click(function () {
+
+											var userKvalue = $("#kValue").val();
+
+												var user = [
+													+$("#num1").val(),
+													+$("#num2").val(),
+													+$("#num3").val(),
+													+$("#num4").val(),
+													+$("#num5").val(),
+													+$("#num6").val()
+												];
+												//Loop through the array and add the adjacent number and check for the answer
+												for (var varArray = 0; varArray < user.length - 2; varArray++) {
+													//This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
+													for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+
+														if (userKvalue == user[varArray] + user[innerLoop]) {
+
+															return;
+														/*
+														if (user[varArray + 1] + user[varArray] == kNumber ||
+															user[varArray + 2] + user[varArray] == kNumber ||
+															user[varArray + 3] + user[varArray] == kNumber ||
+															user[varArray + 4] + user[varArray] == kNumber ||
+															user[varArray + 5] + user[varArray] == kNumber) {
+
+															othernumber = varArray - kNumber;
+															*/
+														}
+													}
+												}
+													///output values to display
+													
+													$("#kValueAfter").text(userKvalue);
+
+													$("#firstArrayNum").text(user[varArray]);
+
+														$("#secondArrayNum").text(user[innerLoop]);
+													});            
+												
+                                                </pre>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -279,16 +389,16 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- End of sum of all fears -->
+                    <!-- palindrome modal with a button -->
                     <div class="col-lg-2 addpadding">
                         <!-- palindrome modal with a button -->
                         <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2">Palindrome</button>
                         <br /><p></p>
-                        A palendore program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+                        A palindrome program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
                         <!-- Modal -->
                         <div id="myModal2" class="modal fade" role="dialog">
                             <div class="modal-dialog">
-
                                 <!-- Modal content-->
                                 <div class="modal-content container-fluid">
                                     <div class="modal-header">
@@ -297,7 +407,7 @@
 
                                     </div>
                                     <div class="modal-body">
-                                        A palendore program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+                                        A palindrome program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <input id="palIn" type="text" placeholder="Enter your word" class="form-control palIn" />
@@ -328,8 +438,10 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
+                    <!--End of Palindrome-->
                     <!--Start of the FizzBuzz Modal-->
                     <div class="col-lg-2 addpadding">
                         <!-- FizzBuzz modal with a button -->
@@ -407,7 +519,7 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">Factoral</h4>
-                                        
+
                                     </div>
                                     <div class="modal-body">
                                         <div class="row addpadding">
@@ -432,27 +544,56 @@
                                     </div>
                                 </div>
                             </div>
-                            </div>
                         </div>
+                    </div>
                     <!--Start of Math Exercise-->
-                    <div class="col-lg-2 addpadding">
+                    <div class="col-lg-3 addpadding">
                         <!-- Math Exercise modal with a button -->
-                        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Math Exercise</button>
+                        <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal5">Math Exercise</button>
                         <br /><p></p>
                         A Math Exercise that allows the user to input 5 number and from those five numbers get the Lowest, Highest, mean and Sum of the numbers
                         <!-- Modal -->
-                        <div id="myModal" class="modal fade" role="dialog">
+                        <div id="myModal5" class="modal fade" role="dialog">
                             <div class="modal-dialog">
-
                                 <!-- Modal content-->
-                                <div class="modal-content">
+                                <div class="modal-content container-fluid">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Modal Header</h4>
+                                        <h4 class="modal-title">Math Exercise</h4>
                                     </div>
-                                    <div class="modal-body">
-                                        <p>Some text in the modal.</p>
-                                    </div>
+                                    <div class="modal-body">                                    
+                                             This page allows you to calculate five numbers that you enter randomly
+                                     <br />
+                                                <div class="row">
+                                                    <!--split it into columns for text and input boxes-->
+                                                    <!--First Column-->
+                                                    <div class="col-sm-6 container">           
+                                                            <!--First Inner Column-->
+                                                            <input type="number" id="mathNum1" class="form-control addpadding" placeholder="Enter your First Number" />
+
+                                                            <input type="number" id="mathNum2" class="form-control addpadding" placeholder="Enter your Second Number" />
+
+                                                            <input type="number" id="mathNum3" class="form-control addpadding" placeholder="Enter your Third Number" />
+
+                                                            <input type="number" id="mathNum4" class="form-control addpadding" placeholder="Enter your Fourth Number" />
+
+                                                            <input type="number" id="mathNum5" class="form-control addpadding" placeholder="Enter your Fifth Number" />
+
+                                                            <div class="row">
+                                                                <button type="button" class="btn btn-default addpadding" id="btn1">Tap to Calculate</button>
+                                                                <button id="clearBtn" type="button" class="btn btn-default addpadding">Clear</button>
+                                                            </div>
+                                                    </div>      
+                                                    <!--Second column-->
+                                                    <div class="col-sm-6 container">                              
+                                                         The Results for the calculations is:                                                                                                                                                                              
+                                                          <p id="least"></p>                                                           
+                                                          <p id="greatest"></p>                                                          
+                                                          <p id="mean"></p>                                                       
+                                                          <p id="sum"></p>                                                        
+                                                          <p id="product"></p>                                               
+                                                    </div>                                                                     
+                                                 </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
@@ -477,50 +618,9 @@
         </div>
     </section>
     <div class="row">
-        <div class="col-md-12 projectWord">
-            <p class="projectWord">Created with 4 Coding Exercises that do the following: </p>
-            <br />
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-mine">A Math Exercise that allows the user to input 5 number and from those five numbers get the Lowest, Highest, mean and Sum of the numbers</li>
-                        <li class="list-group-item list-group-item-mine">A palendore program that lets the user input a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.</li>
-                        <li class="list-group-item list-group-item-mine">
-                            A Fizz Buzz Program that Write a short program that prints each number from 1 to 100 on a new line.
-
-                            For each multiple of a number, prints "Fizz" instead of the number.
-
-                            For each multiple of another input number, prints "Buzz" instead of the number.
-
-                            For numbers which are multiples of both numbers, print "FizzBuzz" instead of the number.
-                        </li>
-                        <li class="list-group-item list-group-item-mine">
-                            This challenge requires you to return the factorial of a given number. A factorial of some number N is N multiplied by (N-1) multiplied by (N-2) and so forth until you reach the number 1
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="col-md-4">
-
-                </div>
-            </div>
-        </div>
+        
     </div>
-    @*<section></section>
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2 class="text-primary">Get Started</h2>
-            </div>
-            <br>
-            <hr />
-            <br>
-            
-        </div>*@
+    
 
 <section id="last">
     <aside class="bg-dark">
@@ -539,34 +639,38 @@
                     <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <form class="contact-form row">
+                    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" placeholder="Name" name="FromName">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Email" name="FromEmail">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Phone">
+                            <input type="text" class="form-control" placeholder="Phone" name="Subject">
                         </div>
                         <div class="col-md-12">
                             <label></label>
-                            <textarea class="form-control" rows="9" placeholder="Your message here.."></textarea>
+                            <textarea class="form-control" rows="9" placeholder="Your message here.." name="Body"></textarea>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
                             <label></label>
-                            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                            <button type="submit" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
                         </div>
-                    </form>
+                    }
+
+
                 </div>
             </div>
         </div>
     </aside>
 </section>
-    <footer id="footer">
+    @*<footer id="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6 col-sm-3 column">
@@ -623,7 +727,7 @@
                         <li>
                             <a rel="nofollow" href="https://www.facebook.com/moses.m.mwangi" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;
                         </li>
-                        @*<li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>*@
+                        <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
                         <li>
                             <a rel="nofollow" href="https://www.instagram.com/mosnginazuri/" title="instagram"><i class="icon-lg ion-social-instagram-outline"></i></a>
                         </li>
@@ -633,7 +737,7 @@
             <br />
             <span class="pull-right text-muted small"><a href="https://mosescoder.azurewebsites.net/">Created by Moses Mbutha Mwangi</a> Â©2019</span>
         </div>
-    </footer>
+    </footer>*@
     <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
