@@ -160,6 +160,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\bootstra-fade2.jpg" />
+    <Content Include="Images\bootstrap.jpg" />
+    <Content Include="Images\Csharp.png" />
+    <Content Include="Images\Git.png" />
+    <Content Include="Images\html5.jpg" />
+    <Content Include="Images\javscript.jpg" />
+    <Content Include="Images\Typing.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\ionicons.eot" />
