@@ -1,5 +1,23 @@
-﻿  
-//Start of Math Exercises
+﻿$('.carousel').carousel({
+    interval: 2000
+})  
+
+
+//Start of Math Exercises javacsript
+
+$("#code5").hide();
+
+$("#showToggleMath").click(function () {
+    $("#code5").toggle();
+
+    if ($("#showToggleMath").text() == "Show Code")
+    {
+        $("#showToggleMath").text("Hide Code");
+    }
+    else {
+        $("#showToggleMath").text("Show Code");
+    }
+});
 
             $("#btn1").click(function () {
             //Step 1: get the user data
@@ -36,8 +54,23 @@
             
             $("#least, #greatest, #mean, #sum, #product",).text("");
 
-        })
+            })
+//End of math exercise code
 
+
+//Beggining of Factoral javascript code
+$("#code4").hide();
+
+$("#showToggleFact").click(function () {
+    $("#code4").toggle();
+
+    if ($("#showToggleFact").text() == "Show Code") {
+        $("#showToggleFact").text("Hide Code");
+    }
+    else {
+        $("#showToggleFact").text("Show Code");
+    }
+});
 
         $("#btnFact").click(function () {
             //Step 1: Get User data
@@ -64,13 +97,28 @@
         })
 
         //Clear the text
-        $("#btnClear").click(function () {
+        $("#btnClearFact").click(function () {
 
-        $("#factOut").val('');
+        $("#fact").val('');
 
         })
+//End of Fizz buzz Javascript code
 
 // Start of Fizz buzz code
+$("#code3").hide();
+
+$("#showToggleFiz").click(function ()
+{
+    $("#code3").toggle();
+
+    if ($("#showToggleFiz").text() == "Show Code") {
+        $("#showToggleFiz").text("Hide Code");
+    }
+    else {
+        $("#showToggleFiz").text("Show Code");
+    }
+});
+
 $("#btnFizzBuzz").click(function () {
 
     var num1 = +$("#fbInput1").val();
@@ -118,15 +166,15 @@ $("#btnFizzBuzz").click(function () {
 
     })
 })
-//end of Fizz-Buzz Code
+//end of Fizz-Buzz Code coding exercise
 
 
-//Start of Palindrome
-$("#code4").hide();
+//Start of Palindrome coding eaxercise
+$("#code2").hide();
 
 $("#showTogglePal").click(function ()
 {
-    $("#code4").toggle();
+    $("#code2").toggle();
 
     if ($("#showTogglePal").text() == "Show Code") {
         $("#showTogglePal").text("Hide Code");
@@ -146,8 +194,6 @@ $("#showTogglePal").click(function ()
 
         nonSpaceWord = word.replace(/\s+/g, "").toLowerCase();
         //nonSpaceRev = Reverse(nonSpaceWord).toLowerCase();
-
-
         //Step2: Reverse the word
         //Decrementing for loop in conjuction with the subtr command and the += operator to produce the reverse word
         //reverseWord = Reverse(word);
@@ -192,12 +238,11 @@ $("#btnPal2").click(function () {
 
     $("#palOut2").text(message); l;
 
-    //clear text
-
-
+    
 })
 
-$("#btnClrearPal").click(function () {
+//clear text
+$("#btnClearPal").click(function () {
 
     $("#palOut").val("");
 
@@ -205,11 +250,13 @@ $("#btnClrearPal").click(function () {
 //ending code palindrome
 
 //--Beggining code for Sum of All fears
-$("#code5").hide();
+
+
+$("#code1").hide();
 
 $("#showToggle").click(function ()
 {   
-    $("#code5").toggle();
+    $("#code1").toggle();
 
     if ($("#showToggle").text() == "Show Code")
     {
@@ -224,6 +271,8 @@ $("#showToggle").click(function ()
 $("#soafRun").click(function () {
 
     var userKvalue = $("#kValue").val();
+    var firstNumber;
+    var secondNumber;
 
     var user = [
         +$("#soafNum1").val(),
@@ -233,12 +282,17 @@ $("#soafRun").click(function () {
         +$("#soafNum5").val(),
         +$("#soafNum6").val()
     ];
+
     //Loop through the array and add the adjacent number and check for the answer
+
     for (var varArray = 0; varArray < user.length; varArray++) {
         //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
-        for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+        for (var innerLoop = varArray + 1; innerLoop < user.length - 1; innerLoop++) {
             //this inner inner loop checks a condition that meets the value knm
             if (userKvalue == user[varArray] + user[innerLoop]) {
+                firstNumber = user[varArray];
+                secondNumber = user[innerLoop];
+
                 break;//for loop control mechanism, comes out of the foreloop when the condition is met
             }
             else {
@@ -248,6 +302,22 @@ $("#soafRun").click(function () {
     }
     //output values to display
 
-    $("#kValueAfter").html( + userKvalue + "</b>  was found by adding array members ") + $("#firstArrayNum").html(varArray) + "and" + $("#secondArrayNum").html(innerLoop+1);
+   
+    valMessage = userKvalue + " was found by adding " + firstNumber + " and " + secondNumber + "."
+
+    $("#soafAns").text(valMessage);  
+
+    //clear text for new entries
 });
+
+$("#btnClearSof").click(function ()
+{
+    $("#soafNum1").val('');
+    $("#soafNum2").val('');
+    $("#soafNum3").val('');
+    $("#soafNum4").val('');
+    $("#soafNum5").val('');
+    $("#soafNum6").val('');
+});
+
  
