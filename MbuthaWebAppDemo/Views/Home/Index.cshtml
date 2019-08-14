@@ -18,7 +18,8 @@
     <link href="~/Content/ionicons.min.css" rel="stylesheet" />
     <link href="~/Content/styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-
+    <!--Carousel script tags-->
+    
 
 
     @*<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">*@
@@ -78,7 +79,7 @@
     <header id="first">
         <div class="header-content">
             <div class="inner">
-                <h1 class="cursive">.Net Full Stack Developer Moses Mbutha Mwangi</h1>
+                <h1 class="">.Net Full Stack Developer Moses Mbutha Mwangi</h1>
                 <h4>Offering Sound Full Stack Solutions: Using the .Net stack of technologies in cluding but not limited to HTML5, CSS3, C#, Miscrosoft SQL, Razor, BootStrap and Azure related services</h4>
                 <hr>
             </div>
@@ -138,6 +139,76 @@
                 </div>
             </div>
         </div>
+        <!--Start of carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/Images/bootstra-fade2.jpg" alt="Bootstrap">
+                    <div class="carousel-caption img-responsive">
+                        <h1 class="carotext">Bootstrap means functionally beautiful sites</h1>
+                        <h2 class="carotext">The ingeniuty of Bootstrap 3 and 4</h2>
+                        <h3 class="carotext">So many ways to design wonderful pleasing site that can be deployed quickly and styled purposefully with bootstrap</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="~/Images/Csharp.png" alt="Csharp">
+                    <div class="carousel-caption img-responsive">
+                        <h1 class="carotext">C# and Micrsoft MS-MSL</h1>
+                        <h2 class="carotext">We have build powerfull web based softwate with a robust database and powerfull code to back it up</h2>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="~/Images/Git.png" alt="Version Control">
+                    <div class="carousel-caption img-responsive">
+                        <h1 class="carotext">Git</h1>
+                        <h2 class="carotext">From installing the Git Hub desktop app and Using it daily as we work on projects.</h2>
+                        <h3 class="carotext">We have learnt that version control is crucial especially when you need a back up for your data</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="~/Images/html5.jpg" alt="HTML5">
+                    <div class="carousel-caption img-responsive">
+                        <h1 class="carotext">Html and CCS</h1>
+                        <h2 class="carotext">Most of the page structure is constucted with Html and CSS is responsible for defining style elements.</h2>
+                        <h3 class="carotext">Coder Foundry has anabled me to to me more proficient and comfortable in HTML and CSS</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="~/Images/javscript.jpg" alt="Javascript">
+                    <div class="carousel-caption img-responsive">
+                        <h1 class="carotext">Javascript</h1>
+                        <h2 class="carotext">Javascript Embeded Code Enabling Syntax highlighter, and functionality of coding exercises</h2>
+                        
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!--End of Carousel-->
     </section>
     <section id="two">
         <div class="container">
@@ -253,6 +324,7 @@
                 <div class="row text-left">
                     <h2 class="text-center text-primary">Coding Chellenges</h2>
                     <hr />
+                    <!--Start of Sum of all fears-->
                     <div class="col-lg-2 addpadding">
                         <!-- Sum of all fears modal -->
                         <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Sum of All fears</button>
@@ -319,63 +391,60 @@
                                                     <input id="kValue" type="number" class="form-control addpadding" />
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <button id="soafRun" class="btn btn-primary">Search</button>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <button id="showToggle" class="btn btn-primary">Show Code</button>
-                                                </div>
+                                            <div class="row addpadding">
+                                                <button id="soafRun" class="btn btn-default addpadding">Search</button>
+                                                <button id="btnClearSof" class="btn btn-default addpadding">Clear</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button id="showToggle" class="btn btn-primary">Show Code</button>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <h6 id="kValueAfter"></h6>
-                                                    <h6 id="firstArrayNum"></h6>
-                                                    <h6 id="secondArrayNum"></h6>
+
+                                                    <h5 id="soafAns"></h5>
+
                                                 </div>
                                             </div>
-                                            <div id="code5" class="rows">
+                                            <div id="code1" class="rows">
                                                 <pre class="brush: js container">
-											$("#run").click(function () {
+$("#soafRun").click(function () {
 
-											var userKvalue = $("#kValue").val();
+    var userKvalue = $("#kValue").val();
+    var firstNumber;
+    var secondNumber;
 
-												var user = [
-													+$("#num1").val(),
-													+$("#num2").val(),
-													+$("#num3").val(),
-													+$("#num4").val(),
-													+$("#num5").val(),
-													+$("#num6").val()
-												];
-												//Loop through the array and add the adjacent number and check for the answer
-												for (var varArray = 0; varArray < user.length - 2; varArray++) {
-													//This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
-													for (var innerLoop = 0; innerLoop < user.length - 1; innerLoop++) {
+    var user = [
+        +$("#soafNum1").val(),
+        +$("#soafNum2").val(),
+        +$("#soafNum3").val(),
+        +$("#soafNum4").val(),
+        +$("#soafNum5").val(),
+        +$("#soafNum6").val()
+    ];
 
-														if (userKvalue == user[varArray] + user[innerLoop]) {
+    //Loop through the array and add the adjacent number and check for the answer
 
-															return;
-														/*
-														if (user[varArray + 1] + user[varArray] == kNumber ||
-															user[varArray + 2] + user[varArray] == kNumber ||
-															user[varArray + 3] + user[varArray] == kNumber ||
-															user[varArray + 4] + user[varArray] == kNumber ||
-															user[varArray + 5] + user[varArray] == kNumber) {
+    for (var varArray = 0; varArray < user.length; varArray++) {
+        //This inner loop cycles through the rest of the adjacent numbers trying to find a valid number
+        for (var innerLoop = varArray + 1; innerLoop < user.length - 1; innerLoop++) {
+            //this inner inner loop checks a condition that meets the value knm
+            if (userKvalue == user[varArray] + user[innerLoop]) {
+                firstNumber = user[varArray];
+                secondNumber = user[innerLoop];
 
-															othernumber = varArray - kNumber;
-															*/
-														}
-													}
-												}
-													///output values to display
-													
-													$("#kValueAfter").text(userKvalue);
+                break;//for loop control mechanism, comes out of the foreloop when the condition is met
+            }
+            else {
+                $("#KValueAfter").html("<b>K value was not found</b>");
+            }
+        }
+    }
+    //output values to display
 
-													$("#firstArrayNum").text(user[varArray]);
+   
+    valMessage = userKvalue + " was found by adding " + firstNumber + " and " + secondNumber + "."
 
-														$("#secondArrayNum").text(user[innerLoop]);
-													});            
+    $("#soafAns").text(valMessage);
 												
                                                 </pre>
                                             </div>
@@ -390,7 +459,7 @@
                         </div>
                     </div>
                     <!-- End of sum of all fears -->
-                    <!-- palindrome modal with a button -->
+                    <!-- Start of palindrome modal with a button -->
                     <div class="col-lg-2 addpadding">
                         <!-- palindrome modal with a button -->
                         <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2">Palindrome</button>
@@ -431,6 +500,40 @@
                                                     <p id="palOut2"></p>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div id="code2" class="rows">
+                                            <!--This is where the pre tag codes go-->
+                                            <pre class="brush: js container">
+$("#btnPal1").click(function () {
+        //Step 1: Get the word
+        var word = $("#palIn").val();
+
+        var reverseWord = "";
+        var nonSpaceWord = "";
+
+        nonSpaceWord = word.replace(/\s+/g, "").toLowerCase();
+        //nonSpaceRev = Reverse(nonSpaceWord).toLowerCase();
+        //Step2: Reverse the word
+        //Decrementing for loop in conjuction with the subtr command and the += operator to produce the reverse word
+        //reverseWord = Reverse(word);
+
+        for (var i = word.length - 1; i >= 0; i--) {
+            reverseWord += nonSpaceWord.substr(i, 1);
+            }
+            var valMessage = "";
+
+            if (nonSpaceWord === reverseWord) {
+            valMessage = nonSpaceWord + " is the same as " + reverseWord + " therefore " + word + " is a palindrome"
+            }
+            else {
+            valMessage = nonSpaceWord + " is not the same as " + reverseWord + " therefore " + word + " is not a palindrome"
+            }
+        //Show the reversed word
+
+        $("#palOut").text(valMessage);
+
+    })
+</pre>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -476,8 +579,13 @@
                                                     <button id="btnFizzBuzz" class="btn btn-default">Check to See if its a fizzbuzz</button>
                                                 </div>
                                                 <br />
-                                                <div class="row addpadding">
-                                                    <button id="btnClearBuzz" class="btn btn-default">Clear Text</button>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <button id="btnClearBuzz" class="btn btn-default">Clear Text</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button id="showToggleFiz" class="btn btn-primary">Show Code</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2"></div>
@@ -494,12 +602,62 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div id="code3" class="rows">
+                                            <!--This is where the pre tag codes go-->
+                                            <pre class="brush: js container">
+$("#btnFizzBuzz").click(function () {
+
+    var num1 = +$("#fbInput1").val();
+    var num2 = +$("#fbInput2").val();
+    var output = " ";
+    var space = " ";
+
+    //var fizzbuzzbuzzEntry = "<span class='fizzbuzz'>Fii-Buzz</span>";
+
+    for (var counter = 1; counter <= 100; counter++) {
+
+        if (counter % num1 == 0 && counter % num2 == 0) {
+
+            output += "<span class='fizzbuzz'>Fizz-Buzz" + space + "</span>";
+        }
+
+        else if (counter % num1 == 0) {
+
+            output += "<span class='fizz'>Fizz" + space + "</span>";
+        }
+
+        else if (counter % num2 == 0) {
+
+            output += "<span class='buzz'>Buzz" + space + "</span>";
+        }
+        else {
+            output += "<span>" + counter + space + "</span>";
+        }
+
+
+    }
+
+    output = output.substr(0, output.length - 2);
+
+    $("#fizzBuzzOut").html(output);
+    //clear text
+
+    $("#btnClearBuzz").click(function () {
+
+        $("#fizzBuzzOut").val('');
+
+        $("#fbInput1").val('');
+
+        $("#fbInput2").val('');
+
+    })
+</pre>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -526,17 +684,62 @@
                                             <p>Enter a number in the space provided and the program will generate the factoral of that number</p>
                                             <div class="col-md-4">
                                                 <div class="row">
-                                                    <input id="fact" type="number" placeholder="Enter your number" class="form-control" />
+                                                    <input id="fact" type="number" placeholder="Enter your number" class="form-control addpadding" />
                                                 </div>
-                                                <br />
+
                                                 <div class="row">
-                                                    <button id="btnFact" class="btn btn-default">Calculate</button>
+                                                    <div class="col-md-6">
+                                                        <button id="btnFact" class="btn btn-default">Calculate</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <button id="btnClearFact" class="btn btn-default">Clear Number</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <button id="showToggleFact" class="btn btn-primary addpadding">Show Code</button>
                                                 </div>
                                             </div>
                                             <div class="col-md-8 text-center">
                                                 <u>Result</u>
                                                 <p id="factOut"></p>
                                             </div>
+                                        </div>
+                                        <div id="code4" class="rows">
+                                            <!--This is where the pre tag codes go-->
+                                            <pre class="brush: js container">
+
+                                                $("#btnFact").click(function () {
+            //Step 1: Get User data
+             var number = +$("#fact").val();
+
+
+        //we are trying to make sure the user does not enter numbers greater than 170
+        if (number > 170) {
+            alert("Please enter positive numbers less than 171");
+            $("#fact").val('');
+            return;//return satement used to kick out the click anonymous function
+        }
+
+         else {
+               //Step 2:Calculate the factorial
+               for (var loop = number - 1; loop > 1; loop--) {
+                //How do we calculate the factorial
+                number *= loop;
+            }
+
+         }
+        //Step: Show the result
+        $("#factOut").text(number);
+        })
+
+        //Clear the text
+        $("#btnClear").click(function () {
+
+        $("#factOut").val('');
+
+        })
+
+                                            </pre>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -546,7 +749,8 @@
                             </div>
                         </div>
                     </div>
-                    <!--Start of Math Exercise-->
+                    <!--End of the Factoral Modal-->
+                    <!--Start of Math Exercise Modal-->
                     <div class="col-lg-3 addpadding">
                         <!-- Math Exercise modal with a button -->
                         <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal5">Math Exercise</button>
@@ -561,47 +765,90 @@
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <h4 class="modal-title">Math Exercise</h4>
                                     </div>
-                                    <div class="modal-body">                                    
-                                             This page allows you to calculate five numbers that you enter randomly
-                                     <br />
+                                    <div class="modal-body">
+                                        This page allows you to calculate five numbers that you enter randomly
+                                        <br />
+                                        <div class="row">
+                                            <!--split it into columns for text and input boxes-->
+                                            <!--First Column-->
+                                            <div class="col-sm-6 container">
+                                                <!--First Inner Column-->
+                                                <input type="number" id="mathNum1" class="form-control addpadding" placeholder="Enter your First Number" />
+
+                                                <input type="number" id="mathNum2" class="form-control addpadding" placeholder="Enter your Second Number" />
+
+                                                <input type="number" id="mathNum3" class="form-control addpadding" placeholder="Enter your Third Number" />
+
+                                                <input type="number" id="mathNum4" class="form-control addpadding" placeholder="Enter your Fourth Number" />
+
+                                                <input type="number" id="mathNum5" class="form-control addpadding" placeholder="Enter your Fifth Number" />
+
                                                 <div class="row">
-                                                    <!--split it into columns for text and input boxes-->
-                                                    <!--First Column-->
-                                                    <div class="col-sm-6 container">           
-                                                            <!--First Inner Column-->
-                                                            <input type="number" id="mathNum1" class="form-control addpadding" placeholder="Enter your First Number" />
+                                                    <button type="button" class="btn btn-default addpadding" id="btn1">Tap to Calculate</button>
+                                                    <button id="clearBtn" type="button" class="btn btn-default addpadding">Clear</button>
+                                                    <button id="showToggleMath" class="btn btn-primary">Show Code</button>
+                                                </div>
+                                            </div>
+                                            <!--Second column-->
+                                            <div class="col-sm-6 container">
+                                                The Results for the calculations is:
+                                                <p id="least"></p>
+                                                <p id="greatest"></p>
+                                                <p id="mean"></p>
+                                                <p id="sum"></p>
+                                                <p id="product"></p>
+                                            </div>
+                                        </div>
+                                        <div id="code5" class="rows">
+                                            <!--This is where the pre tag codes go-->
+                                            <pre class="brush: js container">
+$("#btn1").click(function () {
+            //Step 1: get the user data
+            var num1 = Number($("#mathNum1").val());
+            //getting the value from user input from an input element
+                var num2 = Number($("#mathNum2").val());//
+                var num3 = Number($("#mathNum3").val());
+                var num4 = Number($("#mathNum4").val());
+                var num5 = Number($("#mathNum5").val());
 
-                                                            <input type="number" id="mathNum2" class="form-control addpadding" placeholder="Enter your Second Number" />
+            //Step 2: Do something with the data in this case add and multiply
+            //perform some operation
+            //var sum = num1 + num2 + num3 + num4 + num5;
+            //var product = num1 * num2 * num3 * num4 * num5;
+            //var average = sum / 5;
 
-                                                            <input type="number" id="mathNum3" class="form-control addpadding" placeholder="Enter your Third Number" />
+            $("#least").text("The smallest number is: " + Math.min(num1, num2, num3, num4, num5));
+            $("#greatest").text("The largest number is: " + Math.max(num1, num2, num3, num4, num5));
+            $("#sum").text("The sum of the numbers is: " + (num1 + num2 + num3 + num4 + num5));
+            $("#product").text("The product of numbers is: " + (num1 * num2 * num3 * num4 * num5));
+            $("#mean").text("The average of numbers is: " + (num1 + num2 + num3 + num4 + num5)/5);
 
-                                                            <input type="number" id="mathNum4" class="form-control addpadding" placeholder="Enter your Fourth Number" />
 
-                                                            <input type="number" id="mathNum5" class="form-control addpadding" placeholder="Enter your Fifth Number" />
+            //Step 3 display the results
+            //$("#greatest").text("The largest number is: " + largest);
+            //$("#mean").text("The sum of the numbers is: " + sum);
+            //$("#sum").text("The product of the numbers is: " + product);
+            //$("#product").text("The average of the numbers is: " + average);
+            })
 
-                                                            <div class="row">
-                                                                <button type="button" class="btn btn-default addpadding" id="btn1">Tap to Calculate</button>
-                                                                <button id="clearBtn" type="button" class="btn btn-default addpadding">Clear</button>
-                                                            </div>
-                                                    </div>      
-                                                    <!--Second column-->
-                                                    <div class="col-sm-6 container">                              
-                                                         The Results for the calculations is:                                                                                                                                                                              
-                                                          <p id="least"></p>                                                           
-                                                          <p id="greatest"></p>                                                          
-                                                          <p id="mean"></p>                                                       
-                                                          <p id="sum"></p>                                                        
-                                                          <p id="product"></p>                                               
-                                                    </div>                                                                     
-                                                 </div>
+            //step 4 button to clear the results
+            $("#clearBtn").click(function () {
+            $("#mathNum1,#mathNum2,#mathNum3,#mathNum4,#mathNum5").val("");
+            
+            $("#least, #greatest, #mean, #sum, #product",).text("");
+
+            })
+                                            </pre>
+                                        </div>
+                                    </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+                    <!--End of the math exercise modal-->
                 </div>
             </div>
         </aside>
@@ -614,130 +861,132 @@
         <div class="container-fluid">
             <div class="col-md-12 text-center">
                 <button type="button" class="btn btn-default btn-lg"><a href="https://mwangiblog2.azurewebsites.net/">Click for MosBlog</a></button>
+                <h3>Blog Project Built Using HTML, CSS, Bootstrap , Miscrosoft SQL and C#</h3>
             </div>
         </div>
     </section>
     <div class="row">
-        
-    </div>
-    
 
-<section id="last">
-    <aside class="bg-dark">
-        <div class="container">
-            <div class="row">
+    </div>
+
+
+    <section id="last">
+        <aside class="bg-dark">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+                            <hr class="primary">
+                            <p>MOSES MBUTHA MWANGI || 3612 Weatherby Dr. || Durham NC 27703 || 919-491-1432 || mosesmwangi1979@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="margin-top-0 wow fadeIn"></h2>
                         <hr class="primary">
-                        <p>MOSES MBUTHA MWANGI || 3612 Weatherby Dr. || Durham NC 27703 || 919-491-1432 || mosesmwangi1979@gmail.com</p>
+                        <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
+                    </div>
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" class="form-control" placeholder="Name" name="FromName">
+                            </div>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" class="form-control" placeholder="Email" name="FromEmail">
+                            </div>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" class="form-control" placeholder="Phone" name="Subject">
+                            </div>
+                            <div class="col-md-12">
+                                <label></label>
+                                <textarea class="form-control" rows="9" placeholder="Your message here.." name="Body"></textarea>
+                            </div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <label></label>
+                                <button type="submit" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                            </div>
+                        }
+
+
                     </div>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="margin-top-0 wow fadeIn"></h2>
-                    <hr class="primary">
-                    <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
-                </div>
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
-                    {
-                        @Html.AntiForgeryToken()
-                        <div class="col-md-4">
-                            <label></label>
-                            <input type="text" class="form-control" placeholder="Name" name="FromName">
-                        </div>
-                        <div class="col-md-4">
-                            <label></label>
-                            <input type="text" class="form-control" placeholder="Email" name="FromEmail">
-                        </div>
-                        <div class="col-md-4">
-                            <label></label>
-                            <input type="text" class="form-control" placeholder="Phone" name="Subject">
-                        </div>
-                        <div class="col-md-12">
-                            <label></label>
-                            <textarea class="form-control" rows="9" placeholder="Your message here.." name="Body"></textarea>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-                            <label></label>
-                            <button type="submit" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
-                        </div>
-                    }
-
-
-                </div>
             </div>
-        </div>
-    </aside>
-</section>
+        </aside>
+    </section>
+    <h3><span class="pull-right text-muted small"><a href="https://mosescoder.azurewebsites.net/">Created by Moses Mbutha Mwangi</a>©2019</span></h3>
     @*<footer id="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-6 col-sm-3 column">
-                    <h4>Information</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="">Products</a>
-                        </li>
-                        <li>
-                            <a href="">Services</a>
-                        </li>
-                        <li>
-                            <a href="">Benefits</a>
-                        </li>
-                        <li>
-                            <a href="">Developers</a>
-                        </li>
-                    </ul>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 column">
+                        <h4>Information</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="">Products</a>
+                            </li>
+                            <li>
+                                <a href="">Services</a>
+                            </li>
+                            <li>
+                                <a href="">Benefits</a>
+                            </li>
+                            <li>
+                                <a href="">Developers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 column">
+                        <h4>About</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Delivery Information</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 column">
+                        <h4>Stay Posted</h4>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button">Subscribe for updates</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 text-right">
+                        <h4>Follow</h4>
+                        <ul class="list-inline">
+                            <li>
+                                <a rel="nofollow" href="https://twitter.com/mosdefmosaic" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="https://www.facebook.com/moses.m.mwangi" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;
+                            </li>
+                            <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
+                            <li>
+                                <a rel="nofollow" href="https://www.instagram.com/mosnginazuri/" title="instagram"><i class="icon-lg ion-social-instagram-outline"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-3 column">
-                    <h4>About</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="#">Delivery Information</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms &amp; Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-3 column">
-                    <h4>Stay Posted</h4>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email">
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button">Subscribe for updates</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xs-12 col-sm-3 text-right">
-                    <h4>Follow</h4>
-                    <ul class="list-inline">
-                        <li>
-                            <a rel="nofollow" href="https://twitter.com/mosdefmosaic" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;
-                        </li>
-                        <li>
-                            <a rel="nofollow" href="https://www.facebook.com/moses.m.mwangi" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;
-                        </li>
-                        <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
-                        <li>
-                            <a rel="nofollow" href="https://www.instagram.com/mosnginazuri/" title="instagram"><i class="icon-lg ion-social-instagram-outline"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                <br />
+                <span class="pull-right text-muted small"><a href="https://mosescoder.azurewebsites.net/">Created by Moses Mbutha Mwangi</a> Â©2019</span>
             </div>
-            <br />
-            <span class="pull-right text-muted small"><a href="https://mosescoder.azurewebsites.net/">Created by Moses Mbutha Mwangi</a> Â©2019</span>
-        </div>
-    </footer>*@
+        </footer>*@
     <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -822,13 +1071,13 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <h2 class="text-center">Moses Mwangi</h2>
-                    <h5 class="text-center">
-                        Husband to my beautiful wife Josephine and Father to awesome daughter Zuri I just want to start of by saying
-                        <br />
-                        "Coding has changed my life".
-                    </h5>
+                    <h4 class="text-center text-justify">
+                        Giving thanks to God and the Opportunity that Coder foundry has given me to grow and showcase my skills
+                        Thankful for my beautiful wife Josephine and daughter Zuri who have been very supportive of my dream to be a .NET developer
+                        <br />                       
+                    </h4>
                     <p class="text-justify">
-                        An outlet to show my skills and Everyday I'm presented with different challenges and opportunities to grow,
+                        Everyday I'm presented with different challenges and opportunities to grow,
                         everyday I know Im a better coder and better problem solver. I enjoy solving problems with code and the
                         satisfaction it gives me is second to none.
                     </p>
