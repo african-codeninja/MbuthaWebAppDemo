@@ -172,6 +172,7 @@
     <Content Include="fonts\ionicons.eot" />
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
+    <Content Include="Images\Moses Mwangi FINAL Resume.pdf" />
     <None Include="Properties\PublishProfiles\mosescoder - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mosesprofile - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mosesprofile- Web Deploy1.pubxml" />
