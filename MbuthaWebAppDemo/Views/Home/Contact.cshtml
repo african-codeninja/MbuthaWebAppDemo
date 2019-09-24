@@ -1,17 +1,70 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿
+@{
+    Layout = null;
 }
+
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Moses Mbutha Mwangi Web Dev Portfolio</title>
+    <meta name="description" content="Moses Mbutha Mwangi Bootstrap Landing page created &#64 Coder Foundry Bootcamp." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
 
-<address>
-    3612 Weatherby Dr<br />
-    Durham, NC 27703<br />
-    <abbr title="Phone">P:</abbr>
-    919.491.1432
-</address>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!--Carousel script tags-->
+    @*<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">*@
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
 
-<address>
-    <strong>Email:</strong>   <a href="mailto:mosesmwangi1979@example.com">mosesmwangi1979@gmail.com</a><br />
-    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/moses-mwangi-787a7431">Linked In</a>
-</address>
+    <link href="~/Scripts/SyntaxHighlighter/scripts/shCore.js" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/SyntaxHighlighter/styles/shCoreMidnight.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
+
+    <link href="~/Content/mbuthaMain.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+<section class="bg-primary" id="one">
+    <div class="container">
+        <div class="row">
+            <address>
+                <strong>Email:</strong>   <a href="mailto:mosesmwangi1979@example.com">mosesmwangi1979@gmail.com</a><br />
+            </address>
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                <h2 class="margin-top-0 text-primary">My Ethos is to build Cool responsive, intuitive pages, built just for you</h2>
+                <br />
+                <h2>Your message has been sent to Moses thank you for your response!</h2>
+                <br />
+                <img src="~/Images/Moses Mwangi.jpg" class="rounded" alt="Moses mwangi" height="300px"><br />
+                <br />
+                <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-xl page-scroll">Click to go back to portfolio</a>
+                <h4 class="primary">
+                    <a href="https://www.linkedin.com/in/moses-mwangi-787a7431">Click to see my linked in profile</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--scripts loaded here -->
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.easing.min.js"></script>
+<script src="~/Scripts/wow.js"></script>
+<script src="~/Scripts/scripts.js"></script>
+<script src="~/Scripts/math_exercise.js"></script>
+
+</body>
+</html>
+
