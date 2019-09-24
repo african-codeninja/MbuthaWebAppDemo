@@ -40,11 +40,11 @@ namespace MbuthaWebAppDemo.Controllers
             {
                 try
                 {
-                    var body = "<p>Email From: <bold>{0}</bold>(){1}</p><p>Message:</p><p>{2}</p>";
+                    var body = "<p>Email From: <strong>{0}</strong><p>{1}</p>Message:<p>{2}</p>";
 
-                    var from = "Moses Mwangi Protfolio<mosesmwangi1979@gmail.com>";
+                    var from = "Moses Mwangi Portfolio<mosesmwangi1979@gmail.com>";
 
-                    model.Body = "This is a message from my portfolio site. The name and email from the person contacting you is above.";
+                    //model.Body = "This is a message from my portfolio site. The name and email from the person contacting you is above.";
 
                     var email = new MailMessage(from, ConfigurationManager.AppSettings["emailto"])
                     {
@@ -65,7 +65,7 @@ namespace MbuthaWebAppDemo.Controllers
                 }
 
             }
-            return View(model);
+            return RedirectToAction("Index","Index");
         }
         public ActionResult BSDemo()
         {
