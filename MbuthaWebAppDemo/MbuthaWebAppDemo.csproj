@@ -174,8 +174,11 @@
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
     <Content Include="Images\Moses Mwangi FINAL Resume.pdf" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\MbuthaWebApp - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mosescoder - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mosesprofile - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\mosesprofile - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\mosesprofile- Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
